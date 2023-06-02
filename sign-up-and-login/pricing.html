@@ -1,49 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pricing.css">
-    <title>Pricing</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../imges/logo.ico">
+  <title>Pricing</title>
 </head>
-<body>
+<!-- ______________________________________ CSS __________________________________________ -->
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
 
-    <div id="center-text">
-        <h2>ChatBox UI</h2>
-        <p>Message send and scroll to bottom enabled </p>
-      </div> 
-    <div id="body"> 
-      
-    <div id="chat-circle" class="btn btn-raised">
-            <div id="chat-overlay"></div>
-                <i class="material-icons">speaker_phone</i>
-        </div>
-      
-      <div class="chat-box">
-        <div class="chat-box-header">
-          ChatBot
-          <span class="chat-box-toggle"><i class="material-icons">close</i></span>
-        </div>
-        <div class="chat-box-body">
-          <div class="chat-box-overlay">   
-          </div>
-          <div class="chat-logs">
-           
-          </div><!--chat-log -->
-        </div>
-        <div class="chat-input">      
-          <form>
-            <input type="text" id="chat-input" placeholder="Send a message..."/>
-          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
-          </form>      
-        </div>
+  /* ______________________________________________NAVBAR__________________________________________________________ */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    background-color: #353232;
+    color: white;
+}
+   
+
+/* Navigation Bar: Logo and image styling */
+
+#logo{
+    margin: 5px 5px;
+    /* background-color: rgb(137, 170, 200); */
+}
+
+#logo img{
+    height: 66px;
+    width: 81px;
+    margin-left: 30px;
+    border-radius: 3px;
+}
+
+/* Navigation Bar: List items styling */
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    margin: 8px 8px;
+}
+
+#navbar ul li a{
+    display: block;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    font-family: 'Francois One', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    padding: 0px 18px;
+    margin: 5px 5px;
+    text-decoration: none;
+
+}
+
+#navbar ul li a:hover{
+    /* color: rgb(237, 225, 225); */
+    /* background-color: #f7f4f4; */
+    /* font-weight: bolder; */
+    padding: px 5px;
+    border-radius: 15px;
+    text-decoration: underline;
+    /* box-shadow: 3px 3px 4px black; */
+    text-shadow: 1px 1px 1px white;
+
+}
+
+button{
+    height: 33px;
+    width: 94px;
+    background-color: #312e2e;
+    color: white;
+    border-radius: 8px;
+}
+button:hover{
+
+    background-color: #484444;;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+  
+
+  /* ---------------------------------------- PRICING CSS ---------------------------------------------------- */
+  .container{
+    background-color: azure;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  .box{
+    background-color: rgb(229, 198, 239);
+    height: 78vh;
+    width: 400px;
+    margin: auto;
+    /* margin-left:0px;
+    margin-right: 0px; */
+    border: 2px solid black;
+    border-radius: 12px;
+    text-align: center;
+    /* padding: 10px; */
+  }
+
+  #box-mid{
+    background-color: rgb(232, 176, 248);
+    height: 82vh;
+    border: 2px solid black;
+    border-radius: 12px;
+  }
+
+  .price{
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bolder;
+    margin: 20px;
+    background-color: black;
+  }
+
+  .features{
+    padding: 23px;
+    /* background-color:violet; */
+    width: 300px;
+    text-align: center;
+    margin: auto;
+  }
+
+  h1{
+    margin: 12px;
+  }
+  h2{
+    margin: 20px;
+  }
+
+
+</style>
+<!-- ____________________________________ HTML BODY __________________________________________ -->
+
+<body>
+  <!-- ___________________________NAVBAR_____________________________ -->
+  <nav id="navbar">
+    <div id="logo">
+        <img src="/imges/logo1.png" alt="Logo">
+    </div>
+
+    <ul>
+        <li class="item"><a href="http://127.0.0.1:5501/sign-up-and-login/index.html#">Home</a></li>
+        <li class="item"><a href="http://127.0.0.1:5001/">Top Players</a></li>
+        <li class="item"><a href="#">Pricing</a></li>
+        <!-- <li class="item"><a href="#">Contact Us</a></li> -->
+    </ul>
+    <div class="btn">
+        <button class="login"><a href="http://127.0.0.1:5501/sign-up-and-login/login.html">Logout</a></button>
+    </div>
+</nav>
+
+  <!-- ___________________________ Pricing Container _____________________________ -->
+
+
+  <div class="container">
+    <div class="box">
+      <h1>Basic</h1>
+      <p class="price">FREE</p>
+
+      <div class="features">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam ratione, enim et eligendi hic? Lorem ipsum dolor sit amet consectetur  </p>
+        <h2>Feature-1</h2>
+        <h2>Feature-2</h2>
+
       </div>
       
-      
-      
-      
+    </div>                
+    <div class="box" id="box-mid">
+      <h1>Ultimate</h1>
+      <p class="price">$19</p>
+      <div class="features">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam ratione, enim et eligendi hic? Lorem ipsum dolor sit amet consectetur</p>
+        <h2>Feature-1</h2>
+        <h2>Feature-2</h2>
+        <h2>Feature-3</h2>
+        <h2>Feature-4</h2>
+        <h2>Feature-5</h2>
+        <h2>Feature-6</h2>
+
+
+
+      </div>
     </div>
+    <div class="box">
+      <h1>Starter</h1>
+      <p class="price">$90</p>
+      <div class="features">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum laboriosam ratione, enim et eligendi hic? Lorem ipsum dolor sit amet consectetur</p>
+        <h2>Feature-1</h2>
+        <h2>Feature-2</h2>
+        <h2>Feature-3</h2>
+        <h2>Feature-4</h2>
+
+      </div>
+
+    </div>
+  </div>
+  
 </body>
-<script src="pricing.js"></script>
 </html>
