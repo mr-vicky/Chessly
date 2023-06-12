@@ -1,2 +1,2 @@
-# [Chessly] 
+# **Chessly** 
 
